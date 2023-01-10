@@ -146,7 +146,7 @@ footer .copyright {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .wide-img {
+  main section.wide-img {
     grid-column: 1/3;
   }
 
