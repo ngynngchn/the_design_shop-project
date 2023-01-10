@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #323a45;
+  font-family: Karla;
+}
+
+:root {
+  --accent-color: #848484;
+  --main-color: #323a45;
+}
+
+@font-face {
+  font-family: Karla;
+  src: url("../fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+body {
+  padding: 5vh 10vw 2vh;
+}
+
+/* ========HEADER========= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-variation-settings: "wght" 700;
+  font-size: 1.2rem;
+}
+
+header nav a {
+  margin-left: 3vw;
+  font-size: 0.8rem;
+  font-variation-settings: "wght" 600;
+}
+
+header nav a:hover,
+.logo:hover {
+  color: var(--accent-color);
+}
+
+/* MENU ICON IN DESKTOP VIEW HIDDEN */
+.menu-icon {
+  width: 30px;
+  background-color: none;
+  display: none;
+}
+
+/* ========MAIN========= */
+
+main section {
+  display: grid;
+  width: 100%;
+  /* grid-template: 85vh 70vh / repeat(3, 1fr); */
+  grid-template: 1fr 0.8fr / repeat(3, 1fr);
+  gap: 5vh 2vw;
+  margin: 5vw 0;
+}
+
+/* ========PRODUCT IMAGE======== */
+
+.product-img-lrg {
+  grid-area: 1/1/2/4;
+}
+
+.product-details {
+  margin-top: 1vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.product-name,
+.product-price,
+.product-brand {
+  font-variation-settings: "wght" 500;
+}
+
+.product-price {
+  text-align: right;
+}
+
+.product-brand {
+  color: var(--accent-color);
+  margin-top: 1vh;
+}
+
+img {
+  width: 100%;
+}
+
+img:hover {
+  filter: opacity(0.5);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  display: grid;
+  margin-top: 10vh;
+  grid-template: 20vh/ 0.6fr 0.4fr 0.5fr 0.5fr;
+  gap: 2vh 2vw;
+}
+
+/* FOOTER ÜBERSCHRIFTEN */
+footer article h2 {
+  margin: 3vh 0;
+  font-size: 1rem;
+  font-variation-settings: "wght" 500;
+}
+
+footer article p,
+footer article span,
+footer article a {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  letter-spacing: -1px;
+}
+
+footer article span {
+  font-variation-settings: "wght" 700;
+}
+
+footer article a {
+  display: block;
+  font-variation-settings: "wght" 500;
+}
+
+footer article .italic {
+  font-style: italic;
+}
+
+footer .copyright {
+  margin-top: 3vh;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+}
+
+/* ======== MEDIA QUERY ======== */
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 5vh 5vw 2vh;
+  }
+
+  main section {
+    grid-template: repeat(4, 8fr) / repeat(2, 1fr);
+  }
+
+  .product-img-lrg {
+    grid-area: 1/1/2/3;
+    align-self: center;
+  }
+  header nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+@media only screen and (max-width: 320px) {
+  body {
+    padding: 5vh 5vw 2vh;
+  }
+
+  main section,
+  footer {
+    display: initial;
+  }
+
+  figure {
+    margin: 3vh 0;
+  }
+}
